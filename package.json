@@ -1,4 +1,23 @@
 {
+  
+  "version": "1.0.0",
+  "main": "gclone.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "imagemin": "imagemin img/* -o dist/img",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "usemin": "usemin gclone.html -d dist --htmlmin -o dist/gclone.html"
+  },
+
+
+
+
+
+
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.5.2",
